@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testCompileOnly 'junit:junit:4.13'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
+
+    implementation('com.graphql-java:graphql-java:16.2')
+    implementation('commons-io:commons-io:2.11.0')
+}
+
+test {
+    useJUnitPlatform()
+}
